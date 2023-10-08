@@ -1,0 +1,17 @@
+#!/bin/bash
+# Написать подробные комментарии
+
+mkdir "Directory"
+cd "Directory"
+for ((i = 1; i <= $1; i++))
+do
+   mkdir "Folder $i"
+   for ((j = 1; j <= $2; j++))
+   do
+      touch "Folder $i/File $j"
+      for ((k  = 1; k <= $3; k++))
+      do
+         echo You have come to the File number $j of the Folder number $i >> "Folder $i/File $j"	
+      done	  
+   done
+done

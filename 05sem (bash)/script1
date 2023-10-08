@@ -1,0 +1,29 @@
+#!/bin/bash
+# Написать подробные комментарии
+# echo "Кису любишь!"
+
+KISA=Киса
+
+echo $KISA
+
+echo $RANDOM
+
+mkdir test
+cd test
+
+n=0
+
+for i in {1..2}
+do
+  	mkdir level1.$i
+	for j in {1..3}
+	do
+		mkdir level1.$i/level2.$j
+		
+		n=$(($n+1))
+					
+		touch level1.$i/level2.$j/TextFile$n
+		echo "This is file $n" > level1.$i/level2.$j/TextFile$n
+		echo $n
+	done
+done
